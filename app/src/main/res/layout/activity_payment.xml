@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".PaymentActivity">
+
+    <TextView
+        android:id="@+id/txtOrderPageTitle"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#6750a4"
+        android:gravity="center"
+        android:text="Pizza Order - Payment"
+        android:textColor="#FEFEFE"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginBottom="43dp"
+        android:gravity="center"
+        android:text="Order Receipt"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPizzaCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtOrderPageTitle" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTotalCost"
+        app:srcCompat="@drawable/pizza" />
+
+    <TextView
+        android:id="@+id/txtToppingCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:hint="ToppingCost"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtNoOfToppings"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="167dp"
+        android:layout_marginEnd="3dp"
+        android:text="Pizza"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPizzaCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Pizza Cost"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtPizzaSize"
+        app:layout_constraintStart_toStartOf="@+id/txtToppingCost" />
+
+    <TextView
+        android:id="@+id/txtToppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toppings"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtNoOfToppings"
+        app:layout_constraintStart_toStartOf="@+id/txtPizza" />
+
+    <TextView
+        android:id="@+id/txtTotalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:hint="TotalCost"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtToppingCost"
+        app:layout_constraintTop_toBottomOf="@+id/txtToppingCost" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Total"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/txtToppings" />
+
+    <Button
+        android:id="@+id/btnPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:text="Payment"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="67dp"
+        android:onClick="onCancel"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnPay" />
+
+    <TextView
+        android:id="@+id/txtPizzaSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:hint="Pizza Size"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtPizzaCost"
+        app:layout_constraintTop_toTopOf="@+id/txtPizza" />
+
+    <TextView
+        android:id="@+id/txtNoOfToppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:hint="NoOfTop"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txtPizzaSize"
+        app:layout_constraintTop_toBottomOf="@+id/txtPizzaSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

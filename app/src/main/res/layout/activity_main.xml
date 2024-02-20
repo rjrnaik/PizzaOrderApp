@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-310dp"
+    tools:layout_editor_absoluteY="-297dp">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#6750a4"
+        android:gravity="center"
+        android:text="PizzaOrder"
+        android:textColor="#C6C7C8"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtToppingTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtAppTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizzaimg" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="137dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:srcCompat="@drawable/pizzaimg" />
+
+    <TextView
+        android:id="@+id/txtAppTitle"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="center"
+        android:text="Order Pizza"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSizeTItle"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="143dp"
+        android:gravity="center"
+        android:text="Select Size"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/rdoGroup"
+        app:layout_constraintEnd_toStartOf="@+id/chkMeat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <TextView
+        android:id="@+id/txtDevlierySwitch"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="46dp"
+        android:gravity="center"
+        android:text="Delivery Required?"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPrice"
+        app:layout_constraintEnd_toStartOf="@+id/swtDelivery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rdoGroup"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Switch
+        android:id="@+id/swtDelivery"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="43dp"
+        android:text="Yes"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtDevlierySwitch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtDevlierySwitch" />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="197dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtDelHelp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtDelHelp"
+        app:layout_constraintTop_toBottomOf="@+id/swtDelivery" />
+
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:onClick="sendOrder"
+        android:text="ORDER"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDeliveryHelp"
+        app:layout_constraintEnd_toEndOf="@+id/swtDelivery"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toEndOf="@+id/txtAppTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtDelHelp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtDelHelp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Devliery Required"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+
+    <Button
+        android:id="@+id/btnDeliveryHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="HELP"
+        android:textAlignment="viewStart"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/txtDelHelp"
+        app:layout_constraintStart_toStartOf="@+id/txtDelHelp"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+
+    <CheckBox
+        android:id="@+id/chkVeg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Veggies - $2"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rdoGroup"
+        app:layout_constraintTop_toBottomOf="@+id/chkCheese" />
+
+    <CheckBox
+        android:id="@+id/chkCheese"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cheese - $2"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/chkMeat"
+        app:layout_constraintTop_toBottomOf="@+id/chkMeat" />
+
+    <TextView
+        android:id="@+id/txtToppingTitle"
+        android:layout_width="200dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:text="Choose Toppings"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/chkMeat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtSizeTItle"
+        app:layout_constraintTop_toBottomOf="@+id/txtAppTitle"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/chkMeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="236dp"
+        android:layout_marginBottom="236dp"
+        android:text="Meat - $2"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDelHelp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtSizeTItle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rdoGroup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="11dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chkVeg"
+        app:layout_constraintEnd_toStartOf="@+id/chkVeg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtToppingTitle">
+
+        <RadioButton
+            android:id="@+id/rdoSmall"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Small - $9"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteY="237dp" />
+
+        <RadioButton
+            android:id="@+id/rdoMedium"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Medium - $10"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteY="285dp" />
+
+        <RadioButton
+            android:id="@+id/rdoLarge"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Large - $11"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            tools:layout_editor_absoluteY="333dp" />
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
