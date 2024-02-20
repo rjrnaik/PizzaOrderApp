@@ -1,16 +1,12 @@
 package pizzaorderappbyrajrishinaik.st991660690.org
 
-import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.core.view.isInvisible
-import androidx.core.view.isVisible
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import pizzaorderappbyrajrishinaik.st991660690.org.databinding.ActivityMainBinding
@@ -19,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
 
-    private var pizzaSize: String = "";
+    private var pizzaSize: String = ""
     private var pizzaPrice: Double = 0.0
     private var noOfToppings: Int = 0
     private var toppingPrice : Double = 0.0
@@ -105,10 +101,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         binding.btnDeliveryHelp.setOnClickListener { view ->
-            var builder: AlertDialog.Builder = AlertDialog.Builder(this)
+            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
             builder
                 .setMessage("\nThank you for choosing our delivery service!" +
-                        "\nWe will have your pizza delivered at your doorstep within 30 mins" +
+                        "\nWe will have your pizza delivered at your doorstep within 30 min" +
                         "\nStandard delivery fee - $2.99\n")
                 .setTitle("Delivery Information")
                 .setNeutralButton("Ok"){dialog, which ->
